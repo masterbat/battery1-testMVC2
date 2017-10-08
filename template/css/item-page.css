@@ -1,0 +1,311 @@
+/*.header  {		       grid-area: header;	}*/
+/*.nuv {	               grid-area: nuv;	}*/
+/*.nuv2 {	               grid-area: nuv2;	}*/
+.center-item-page {	 grid-area: center-item-page;	}
+/*.page-description{   grid-area: page-description; }*/
+.page-item-info{   grid-area: page-item-info; }
+/*.item-bye-with{   grid-area: item-bye-with; }*/
+/*.first{                grid-area: first;}*/
+/*.second{               grid-area: second;}*/
+/*.third{                grid-area: third;}*/
+/*.forth{                grid-area: forth;}*/
+/*.fifth{                grid-area: fifth;}*/
+
+/*.full-item  {		     grid-area: full-item;	}*/
+/*.full-item-2  {	         grid-area: full-item-2;	}*/
+/*.bottom-item  {		     grid-area: bottom-item;	}*/
+/*.footer  {	             grid-area: footer;	}*/
+
+
+
+.wrapper {
+    max-width: 1280px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+            "header header"
+            "nuv nuv"
+            "nuv2 nuv2"
+            "center-item-page center-item-page"
+            "page-item-info page-item-info"
+            "bottom-item bottom-item"
+            "footer footer";
+}
+/*.akum-item-1{ grid-area: akum-item-1;}*/
+.center-item-page{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 350px 450px 1fr;
+    /*text-align: left;*/
+}
+.full-item-about-form p{
+    margin-top: 20px;
+}
+.full-item-about-form .new{
+
+    /*text-align: center;*/
+}
+.page-description{
+    /*justify-self: center;*/
+}
+
+.item-bye-with{
+
+    /*border: 1px dashed lightblue;*/
+    /**/
+
+    /*background-color: #96c6ea;*/
+}
+.on2{
+    margin-top: 10px;
+}
+.on1, .on2{
+    padding: 10px;
+    /*border: 1px dashed lightblue;*/
+}
+
+/*.center-brand{*/
+    /*display: grid;*/
+    /*grid-gap: 15px;*/
+    /*grid-template-columns: repeat(auto-fill, minmax(200px, 1fr) ) ;*/
+/*}*/
+
+/*.center-brand a{*/
+    /*text-decoration: none;*/
+    /*color: #000;*/
+    /*font-size: 100%;*/
+/*}*/
+.foto-1{
+    /*width: 350px;*/
+    height: auto;
+}
+.foto-1 img{
+    width: 100%;
+}
+.fotos a{
+    width: 100px;
+    height: auto;
+
+}
+.fotos > div{
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.page-description h3{
+    font-size: 26px;
+    font-weight: bold;
+    color: #1371b7;
+}
+
+/*------------- light box --------------*/
+
+.viewbox-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.5);
+    z-index: 700;
+}
+.viewbox-body{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    overflow: auto;
+}
+.viewbox-header{
+    margin: 10px;
+}
+.viewbox-content{
+    margin: 10px;
+    width: 300px;
+    height: 300px;
+}
+.viewbox-footer{
+    margin: 10px;
+}
+.viewbox-content .viewbox-image{
+    width: 100%;
+    height: 100%;
+}
+
+/* buttons */
+.viewbox-button-default{
+    cursor: pointer;
+    height: 64px;
+    width: 64px;
+}
+.viewbox-button-default > svg{
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    fill: inherit;
+    pointer-events: none;
+    transform: translateX(0px);
+}
+.viewbox-button-default{
+    fill: #999;
+}
+.viewbox-button-default:hover{
+    fill: #fff;
+}
+
+.viewbox-button-close{
+    position:absolute;
+    top:10px;
+    right: 10px;
+    z-index:9;
+}
+.viewbox-button-next,
+.viewbox-button-prev{
+    position:absolute;
+    top: 50%;
+    height: 128px;
+    width: 128px;
+    margin: -64px 0 0;
+    z-index:9;
+}
+.viewbox-button-next{
+    right: 10px;
+}
+.viewbox-button-prev{
+    left: 10px;
+}
+@media (max-width: 480px) {
+    .viewbox-button-close{
+        top: 0;
+        right: 0;
+    }
+    .viewbox-button-next,
+    .viewbox-button-prev{
+        height: 81px;
+        width: 81px;
+        margin-top: -40px;
+    }
+    .viewbox-button-next{
+        right:-15px;
+    }
+    .viewbox-button-prev{
+        left:-15px;
+    }
+}
+
+/* loader */
+.viewbox-container .loader{
+    /*widows: 100%;*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin:-25px 0 0 -25px;
+}
+.viewbox-container .loader *{
+    margin: 0;
+    padding: 0;
+}
+.viewbox-container .loader .spinner{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    margin: 0 auto;
+}
+.viewbox-container .loader .double-bounce1,
+.viewbox-container .loader .double-bounce2{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #999;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+}
+.viewbox-container .loader .double-bounce2 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+@-webkit-keyframes sk-bounce{
+    0%, 100% { -webkit-transform: scale(0.0) }
+    50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce{
+    0%, 100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    } 50% {
+          transform: scale(1.0);
+          -webkit-transform: scale(1.0);
+      }
+}
+
+/*------------- end light box --------------*/
+
+/*--------- mini-accordeon -----------------*/
+.page-description .container{
+    position: relative;
+    width: 100%;
+
+    margin-top: 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: auto;
+
+
+}
+.page-description .container a{
+    color: black;
+}
+#accordion{
+    position: relative;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /*background-color: #eef3f7;*/
+}
+#accordion li{
+     list-style: none;
+    display: inline;
+}
+#accordion li a{
+    display: inline-block;
+    /*width: 40%;*/
+    width: 49.4%;
+    /*height: 5px;*/
+    height: auto;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+#accordion li a.active{
+    background-color: #eef3f7;
+    border-top: 1px solid #dde7ee;
+}
+#accordion li .box{
+    position: absolute;
+    top: 40px;
+    display: none;
+    padding: 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #eef3f7;
+}
+#accordion li .box.active{
+    display: block;
+}
+/*--------- end mini-accordeon -----------------*/

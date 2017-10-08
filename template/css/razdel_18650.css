@@ -1,0 +1,149 @@
+
+/*.header  {		       grid-area: header;	}*/
+/*.nuv {	               grid-area: nuv;	}*/
+/*.nuv2 {	               grid-area: nuv2;	}*/
+.mini-box {	               grid-area: mini-box;	}
+.center-single-akumulator{   grid-area: center-single-akumulator; }
+.mini_link_razdel{   grid-area: mini_link_razdel; }
+
+/*.first{                grid-area: first;}*/
+/*.second{               grid-area: second;}*/
+/*.third{                grid-area: third;}*/
+/*.forth{                grid-area: forth;}*/
+/*.fifth{                grid-area: fifth;}*/
+
+/*.full-item  {		     grid-area: full-item;	}*/
+/*.full-item-2  {	         grid-area: full-item-2;	}*/
+/*.bottom-item  {		     grid-area: bottom-item;	}*/
+/*.footer  {	             grid-area: footer;	}*/
+.wrapper {
+    /*max-width: 1280px;*/
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+            "header header"
+            "nuv nuv"
+            "nuv2 nuv2"
+            "mini-box mini-box"
+            "mini_link_razdel mini_link_razdel"
+
+            "center-single-akumulator center-single-akumulator"
+            "footer footer";
+}
+/*.akum-item-1{ grid-area: akum-item-1;}*/
+
+
+.mini-box img{
+    width: 100%;
+
+}
+.a, .b, .c, .d{
+    border: 1px solid black;
+    border-radius: 3px;
+    float: left;
+    width: 150px;
+    min-height: 190px;
+    margin: 0 10px 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    padding: 8px;
+}
+.mini_link_razdel{
+    /*margin: 0 auto;*/
+}
+.mini_link_razdel a {
+    display: block;
+    padding: 6px;
+    margin-top: 2px;
+    text-decoration: none;
+    color: black;
+}
+.mini_link_razdel{
+    text-align: center;
+    overflow: hidden;
+}
+
+/*---------------------main-----------------------------------*/
+.center-single-akumulator{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr) ) ;
+}
+
+.single-item {
+    border: 1px dashed lightgray;
+    padding: 10px;
+}
+.single-item h3, .single-item p{
+    padding: 0;
+    margin: 0;
+    margin-top: 4px;
+}
+.single-item h3{
+    padding: 10px;
+}
+.full-item-about-form {
+    margin-top: 20px;
+}
+.center-single-akumulator a{
+    text-decoration: none;
+    color: #000;
+    font-size: 100%;
+
+}
+.btn-primary{
+    font-size: 16px;
+    font-weight: 700;
+}
+.full-item-about-form .btn{
+    vertical-align: baseline;
+}
+.akum-title a{
+    /*background-color: #cfdbe4;*/
+    font-size: 19px;
+    color: #1371b7;
+    /*padding: 10px 17px;*/
+    /*border-radius: 4px;*/
+    /*font-weight: bold;*/
+}
+
+
+.center-single-akumulator img,
+.single-item img{
+    width: 100%;
+}
+
+.center-single-akumulator{
+    text-align: center;
+}
+
+.single-item .akum-else-info_tok{
+    border: 1px dashed brown;
+    display: inline-block;
+    padding: 3px;
+    color: brown;
+    border-radius: 3px;
+    /*color: brown;*/
+}
+.tobasket{
+    margin-top: 5px;
+    display: inline-block;
+    border-radius: 4px;
+    border: 1px solid gray;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+}
+.akum-nominal{
+    font-family: "RobotoLight";
+    font-style: italic;
+    font-size: 14px;
+}
+/*-------------- end main -------------------------------------------------------*/
